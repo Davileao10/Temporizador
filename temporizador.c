@@ -45,7 +45,7 @@ int64_t temporizador_callback(alarm_id_t id, void *user_data) {
 // Função de callback para a interrupção do botão
 void gpio_callback(uint gpio, uint32_t events) {
     if (gpio == BOTAO_GPIO && (events & GPIO_IRQ_EDGE_FALL) && !sistema_ativo) {
-        printf("Botão pressionadooo!\n");
+        printf("Botão pressionado!\n");
         sistema_ativo = true;
 
         // Liga todos os LEDs
